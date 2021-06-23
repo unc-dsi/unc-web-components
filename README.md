@@ -8,7 +8,7 @@ All components are licensed under the Apache License 2.0.
 
 | Component | NPM version | Status | Description |
 |-----------|-------------|------- |-------------|
-| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-initial-bar">&lt;unc-initial-bar&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-initial-bar/next)](https://www.npmjs.com/package/@unc-dsi/unc-initial-bar) | Work in progress | A bar to select an initial. |
+| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-initial-bar">&lt;unc-initial-bar&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-initial-bar/)](https://www.npmjs.com/package/@unc-dsi/unc-initial-bar) | Work in progress | A bar to select an initial. |
 
 ## Browser support
 
