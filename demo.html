@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNC Web Components: Demonstration</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Thrid party imports -->
+    <script type="module" src="node_modules/@vaadin/vaadin-lumo-styles/all-imports.js"></script>
+
+    <!-- UNC Web Components use standard JavaScript modules. -->
+    <script type="module" src="packages/unc-initial-bar/unc-initial-bar.js"></script>
+
+    <style>
+        unc-initial-bar {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>UNC Web Components</h1>
+<p>
+    UNC Web Components is a set of web components provided by the University of New-Caledonia (U.N.C.).
+</p>
+<h2>Components</h2>
+<h3>&lt;unc-initial-bar&gt;</h3>
+<p>
+    A bar to select an initial. Useful for a quick access by person's name.
+</p>
+<unc-initial-bar></unc-initial-bar><br/>
+<span id="initial-bar-result"></span>
+
+<script type="module">
+    /*
+     * Demo's logics
+     */
+
+    // unc-initial-bar
+    document.querySelector('unc-initial-bar').addEventListener('select', event => {
+        document.getElementById("initial-bar-result")
+            .innerText = `old selection: ${event.detail.oldSelection}, new selection: ${event.detail.newSelection}`;
+    });
+
+</script>
+</body>
+</html>

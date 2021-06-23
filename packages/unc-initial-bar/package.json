@@ -1,0 +1,22 @@
+{
+  "name": "@unc/unc-initial-bar",
+  "description": "unc-initial-bar",
+  "version": "0.0.1",
+  "main": "unc-initial-bar.js",
+  "files": [
+    "unc-initial-bar.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-initial-bar",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
