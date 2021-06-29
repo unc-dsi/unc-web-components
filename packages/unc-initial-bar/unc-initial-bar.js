@@ -50,12 +50,12 @@ class UncInitialBar extends HTMLElement {
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
         this._itemClickCallback = event => this._onItemClicked(event);
-        this.selection = '*';
     }
 
     connectedCallback() {
         this.shadowRoot.querySelectorAll('li')
             .forEach(item => item.addEventListener('click', this._itemClickCallback));
+        this.selection = '*';
     }
 
     disconnectedCallback() {
