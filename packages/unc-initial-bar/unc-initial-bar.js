@@ -14,6 +14,8 @@ template.innerHTML = `
     --unc-initial-bar-selected-background-color: var(--lumo-primary-color, hsl(214, 90%, 52%));
     --unc-initial-bar-border-color: var(--lumo-shade-20pct, hsla(214, 53%, 23%, 0.16));
     --unc-initial-bar-hover-color: var(--unc-initial-bar-border-color);
+    --unc-initial-bar-label-color: var(--lumo-secondary-text-color, hsla(214, 42%, 18%, 0.72));
+    --unc-initial-bar-label-size: var(--lumoe-font-size-s, .875rem);
     display: inline-block;
 }
 ul {
@@ -36,13 +38,30 @@ li[selected] {
     color: var(--unc-initial-bar-base-color);
     background-color: var(--unc-initial-bar-selected-background-color);
 }
-</style>    
-<ul>${generateItems()}</ul>
+div {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    align-self: flex-start;
+    color: var(--unc-initial-bar-label-color);
+    font-weight: 500;
+    font-size: var(--unc-initial-bar-label-size);
+    padding-bottom: 0.5em;
+}
+label:empty {
+    display: none;
+}
+</style>
+<div>
+    <label></label>
+    <ul>${generateItems()}</ul>
+</div>
 `;
 
 class UncInitialBar extends HTMLElement {
     static get observedAttributes() {
-        return ['selection'];
+        return ['label', 'selection'];
     }
 
     constructor() {
@@ -65,6 +84,9 @@ class UncInitialBar extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
+            case 'label':
+                this.label = newValue
+                break;
             case 'selection':
                 this.selection = newValue;
                 break;
@@ -73,6 +95,14 @@ class UncInitialBar extends HTMLElement {
 
     _onItemClicked(event) {
         this.selection = event.target.getAttribute('initial');
+    }
+
+    get label() {
+        return this.shadowRoot.querySelector('label').textContent;
+    }
+
+    set label(newLabel) {
+        this.shadowRoot.querySelector('label').textContent = newLabel;
     }
 
     get selection() {

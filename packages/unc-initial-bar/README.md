@@ -1,6 +1,6 @@
 # &lt;unc-initial-bar&gt;
 
-&lt;unc-initial-bar&gt; is bar to select an initial. Useful for a quick access by person's name.
+&lt;unc-initial-bar&gt; is bar to select an initial. Useful for quick access by person's name.
 
 ```html
 <unc-initial-bar selection="R"></unc-initial-bar>
@@ -11,6 +11,7 @@
 
 | Name | Description |
 |------|-------------|
+| label | Text on top of the bar |
 | selection | Select or change the selected initial |
 
 ## Properties
