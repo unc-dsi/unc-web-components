@@ -7,17 +7,11 @@
 ```
 ![screenshot](https://raw.githubusercontent.com/unc-dsi/unc-web-components/main/packages/unc-initial-bar/screenshot.png)
 
-## Attributes
+## Attributes / Properties
 
 | Name | Description |
 |------|-------------|
 | label | Optional text on top of the bar |
-| selection | Select or change the selected initial |
-
-## Properties
-
-| Name | Description |
-|------|-------------|
 | selection | Select or change the selected initial |
 
 ## Events
