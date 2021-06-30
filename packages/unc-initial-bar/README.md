@@ -3,7 +3,7 @@
 &lt;unc-initial-bar&gt; is bar to select an initial. Useful for quick access by person's name.
 
 ```html
-<unc-initial-bar selection="R"></unc-initial-bar>
+<unc-initial-bar label="Name" selection="R"></unc-initial-bar>
 ```
 ![screenshot](https://raw.githubusercontent.com/unc-dsi/unc-web-components/main/packages/unc-initial-bar/screenshot.png)
 
@@ -11,7 +11,7 @@
 
 | Name | Description |
 |------|-------------|
-| label | Text on top of the bar |
+| label | Optional text on top of the bar |
 | selection | Select or change the selected initial |
 
 ## Properties
