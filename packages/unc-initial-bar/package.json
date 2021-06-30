@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-initial-bar",
   "description": "unc-initial-bar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "unc-initial-bar.js",
   "files": [
     "unc-initial-bar.js"

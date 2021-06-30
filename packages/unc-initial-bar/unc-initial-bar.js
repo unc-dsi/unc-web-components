@@ -48,6 +48,7 @@ label {
     font-weight: 500;
     font-size: var(--unc-initial-bar-label-size);
     padding-bottom: 0.5em;
+    line-height: 1;
 }
 label:empty {
     display: none;
