@@ -35,7 +35,7 @@ li:hover {
     background-color: var(--unc-initial-bar-hover-color);
 }
 li[selected] {
-    color: var(--unc-initial-bar-base-color);
+    color: var(--unc-initial-bar-selected-color);
     background-color: var(--unc-initial-bar-selected-background-color);
 }
 div {
