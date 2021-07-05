@@ -4,9 +4,9 @@
 
 ```html
 <unc-vertical-menu>
-    <unc-menu-item href="/search" icon="search" selected>Search</unc-menu-item>
+    <unc-menu-item href="/search" icon="search" label="Search" selected></unc-menu-item>
     <unc-menu-separator></unc-menu-separator>
-    <unc-menu-item href="/users" icon="social:people">Users</unc-menu-item>
+    <unc-menu-item href="/users" icon="social:people" label="Users"></unc-menu-item>
 </unc-vertical-menu>
 ```
 

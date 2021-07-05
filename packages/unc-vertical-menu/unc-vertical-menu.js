@@ -50,8 +50,8 @@ class UncVerticalMenu extends HTMLElement {
             selected.setAttribute('selected', '');
             this.dispatchEvent(new CustomEvent('select', {
                 detail: {
-                    oldSelection: old ? old.textContent : undefined,
-                    newSelection: selected.textContent
+                    oldSelection: old ? old.label : undefined,
+                    newSelection: selected.label
                 }
             }));
         }

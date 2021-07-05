@@ -25,12 +25,12 @@ template.innerHTML = `
 }
 </style>
 <iron-icon></iron-icon>
-<slot></slot>
+<span></span>
 `;
 
 class UncMenuItem extends HTMLElement {
     static get observedAttributes() {
-        return ['icon', 'selected'];
+        return ['icon', 'label', 'selected'];
     }
 
     constructor() {
@@ -55,6 +55,14 @@ class UncMenuItem extends HTMLElement {
 
     set icon(icon) {
         return this.shadowRoot.querySelector('iron-icon').setAttribute('icon', icon);
+    }
+
+    get label() {
+        return this.shadowRoot.querySelector('span').textContent;
+    }
+
+    set label(label) {
+        this.shadowRoot.querySelector('span').textContent = label;
     }
 
     get selected() {
