@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-vertical-menu",
   "description": "unc-vertical-menu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "unc-vertical-menu.js",
   "files": [
     "unc-vertical-menu.js"

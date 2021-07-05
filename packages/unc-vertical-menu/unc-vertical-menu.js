@@ -44,13 +44,13 @@ class UncVerticalMenu extends HTMLElement {
 
     set selected(selected) {
         const old = this.selected;
-        this.querySelectorAll('unc-menu-item')
-            .forEach(item => item.removeAttribute('selected'));
         if (old !== selected) {
+            this.querySelectorAll('unc-menu-item')
+                .forEach(item => item.removeAttribute('selected'));
             selected.setAttribute('selected', '');
             this.dispatchEvent(new CustomEvent('select', {
                 detail: {
-                    oldSelection: old.textContent,
+                    oldSelection: old ? old.textContent : undefined,
                     newSelection: selected.textContent
                 }
             }));
