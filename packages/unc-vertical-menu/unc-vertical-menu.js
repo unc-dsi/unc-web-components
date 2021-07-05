@@ -1,3 +1,6 @@
+import './unc-menu-item';
+import './unc-menu-separator';
+
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
