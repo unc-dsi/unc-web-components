@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-menu-item",
   "description": "unc-menu-item",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "unc-menu-item.js",
   "files": [
     "unc-menu-item.js"

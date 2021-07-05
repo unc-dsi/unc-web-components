@@ -9,7 +9,6 @@
     <unc-menu-item href="/users" icon="social:people">Users</unc-menu-item>
 </unc-vertical-menu>
 ```
-FIXME
 ![screenshot](https://raw.githubusercontent.com/unc-dsi/unc-web-components/main/packages/unc-vertical-menu/screenshot.png)
 
 ## Dependencies
