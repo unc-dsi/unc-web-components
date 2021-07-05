@@ -5,15 +5,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Thrid party imports -->
+    <script type="module" src="node_modules/@polymer/iron-icons/iron-icons.js"></script>
+    <script type="module" src="node_modules/@polymer/iron-icons/social-icons.js"></script>
     <script type="module" src="node_modules/@vaadin/vaadin-lumo-styles/all-imports.js"></script>
 
     <!-- UNC Web Components use standard JavaScript modules. -->
     <script type="module" src="packages/unc-initial-bar/unc-initial-bar.js"></script>
-    <script type="module" src="packages/unc-icons-toolbar/unc-icons-toolbar.js"></script>
+    <script type="module" src="packages/unc-menu-item/unc-menu-item.js"></script>
+    <script type="module" src="packages/unc-menu-separator/unc-menu-separator.js"></script>
+    <script type="module" src="packages/unc-vertical-menu/unc-vertical-menu.js"></script>
 
     <style>
         unc-initial-bar {
             margin-bottom: 1em;
+        }
+        unc-vertical-menu {
+            width: 50%;
         }
     </style>
 </head>
@@ -22,6 +29,7 @@
 <p>
     UNC Web Components is a set of web components provided by the University of New-Caledonia (U.N.C.).
 </p>
+
 <h2>Components</h2>
 
 <h3>&lt;unc-initial-bar&gt;</h3>
@@ -31,6 +39,17 @@
 <unc-initial-bar label="Name"></unc-initial-bar><br/>
 <span id="initial-bar-result"></span>
 
+<h3>&lt;unc-vertical-menu&gt;</h3>
+<p>
+    TODO
+</p>
+<unc-vertical-menu>
+    <unc-menu-item icon="icons:search">Search</unc-menu-item>
+    <unc-menu-separator></unc-menu-separator>
+    <unc-menu-item icon="social:person">Users</unc-menu-item>
+</unc-vertical-menu>
+<span id="menu-result"></span>
+
 <script type="module">
     /*
      * Demo's logics
@@ -39,6 +58,12 @@
     // unc-initial-bar
     document.querySelector('unc-initial-bar').addEventListener('select', event => {
         document.getElementById("initial-bar-result")
+            .innerText = `old selection: ${event.detail.oldSelection}, new selection: ${event.detail.newSelection}`;
+    });
+
+    // unc-vertical-menu
+    document.querySelector('unc-vertical-menu').addEventListener('select', event => {
+        document.getElementById("menu-result")
             .innerText = `old selection: ${event.detail.oldSelection}, new selection: ${event.detail.newSelection}`;
     });
 

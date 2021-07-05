@@ -8,6 +8,7 @@
     "demo": "web-dev-server --node-resolve --open demo.html"
   },
   "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
     "@vaadin/vaadin-lumo-styles": "^20.0.0"
   },
   "devDependencies": {

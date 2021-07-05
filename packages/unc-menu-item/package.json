@@ -1,0 +1,28 @@
+{
+  "name": "@unc-dsi/unc-menu-item",
+  "description": "unc-menu-item",
+  "version": "0.0.1",
+  "main": "unc-menu-item.js",
+  "files": [
+    "unc-menu-item.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-menu-item",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-menu-item"
+  }
+}

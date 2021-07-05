@@ -1,0 +1,28 @@
+{
+  "name": "@unc-dsi/unc-menu-separator",
+  "description": "unc-menu-separator",
+  "version": "0.0.1",
+  "main": "unc-menu-separator.js",
+  "files": [
+    "unc-menu-separator.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-menu-separator",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-menu-separator"
+  }
+}

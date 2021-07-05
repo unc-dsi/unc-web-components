@@ -1,0 +1,28 @@
+{
+  "name": "@unc-dsi/unc-vertical-menu",
+  "description": "unc-vertical-menu",
+  "version": "0.0.1",
+  "main": "unc-vertical-menu.js",
+  "files": [
+    "unc-vertical-menu.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-vertical-menu",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-menu"
+  }
+}
