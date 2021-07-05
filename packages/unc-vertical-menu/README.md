@@ -1,6 +1,6 @@
-# &lt;unc-menu-item&gt;
+# &lt;unc-vertical-menu&gt;
 
-&lt;unc-menu-item&gt; is a sub-element for [&lt;unc-vertical-menu&gt;](https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-menu)
+&lt;unc-vertical-menu&gt; is useful for menu bar.
 
 ```html
 <unc-vertical-menu>
