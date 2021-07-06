@@ -1,11 +1,11 @@
 {
   "name": "@unc-dsi/unc-vertical-tabs",
   "description": "unc-vertical-tabs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "unc-vertical-tabs.js",
   "files": [
-      "unc-vertical-tabs.js",
-      "unc-vertical-tab.js"
+    "unc-vertical-tabs.js",
+    "unc-vertical-tab.js"
   ],
   "keywords": [
     "UNC",
@@ -15,7 +15,9 @@
   ],
   "author": "University of New-Caledonia",
   "license": "Apache-2.0",
-  "dependencies": {},
+  "dependencies": {
+    "@unc-dsi/unc-vertical-menu": "0.0.8"
+  },
   "publishConfig": {
     "access": "public"
   },

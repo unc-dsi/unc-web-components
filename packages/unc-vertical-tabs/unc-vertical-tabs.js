@@ -1,5 +1,5 @@
 import './unc-vertical-tab';
-import '../unc-vertical-menu/unc-vertical-menu';
+import '@unc-dsi/unc-vertical-menu';
 
 const template = document.createElement('template');
 template.innerHTML = `
