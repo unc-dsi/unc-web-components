@@ -1,14 +1,14 @@
 {
-  "name": "@unc-dsi/unc-vertical-menu",
-  "description": "unc-vertical-menu",
-  "version": "0.0.7",
-  "main": "unc-vertical-menu.js",
+  "name": "@unc-dsi/unc-vertical-tabs",
+  "description": "unc-vertical-tabs",
+  "version": "0.0.1",
+  "main": "unc-vertical-tabs.js",
   "files": [
-    "unc-vertical-menu.js"
+    "unc-vertical-tabs.js"
   ],
   "keywords": [
     "UNC",
-    "unc-vertical-menu",
+    "unc-vertical-tabs",
     "web-components",
     "web-component"
   ],

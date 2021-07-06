@@ -21,7 +21,7 @@
 
 | Name | Description |
 |------|-------------|
-| select | Fire when the selection changed.<br> Contains the old selection and the new selection :  {detail: {oldSelection, newSelection }} |
+| select | Fire when the selection changed.<br> Contains index and label of the current selected item:  {detail: {index, label }} |
 
 
 ## License

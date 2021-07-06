@@ -10,8 +10,7 @@ All components are licensed under the Apache License 2.0.
 |-----------|-------------|------- |-------------|
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-initial-bar">&lt;unc-initial-bar&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-initial-bar/)](https://www.npmjs.com/package/@unc-dsi/unc-initial-bar) | Work in progress | A bar to select an initial. |
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-menu">&lt;unc-vertical-menu&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-menu/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-menu) | Work in progress | A vertical menu. |
-| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-menu-item">&lt;unc-menu-item&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-menu-item/)](https://www.npmjs.com/package/@unc-dsi/unc-menu-item) | Work in progress | An item of `unc-vertical-menu`. |
-| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-menu-separator">&lt;unc-menu-separator&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-menu-separator/)](https://www.npmjs.com/package/@unc-dsi/unc-menu-separator) | Work in progress | An separator in `unc-vertical-menu`. |
+| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-tabs">&lt;unc-vertical-tabs&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-tabs/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-tabs) | Work in progress | A tabs system with an dynamic content area. |
 
 ## Browser support
 

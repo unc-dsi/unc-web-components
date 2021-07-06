@@ -12,6 +12,7 @@
     <!-- UNC Web Components use standard JavaScript modules. -->
     <script type="module" src="packages/unc-initial-bar/unc-initial-bar.js"></script>
     <script type="module" src="packages/unc-vertical-menu/unc-vertical-menu.js"></script>
+    <script type="module" src="packages/unc-vertical-tabs/unc-vertical-tabs.js"></script>
 
     <style>
         unc-initial-bar {
@@ -48,6 +49,19 @@
 </unc-vertical-menu>
 <span id="menu-result"></span>
 
+<h3>&lt;unc-vertical-tabs&gt;</h3>
+<p>
+    Tabulations that show dynamically the content associated of the selected tab.
+</p>
+<unc-vertical-tabs>
+    <unc-vertical-tab icon="icons:search" label="Search">
+        <h1>Search</h1>
+    </unc-vertical-tab>
+    <unc-vertical-tab icon="social:person" label="Users">
+        <h1>Users</h1>
+    </unc-vertical-tab>
+</unc-vertical-tabs>
+
 <script type="module">
     /*
      * Demo's logics
@@ -62,7 +76,7 @@
     // unc-vertical-menu
     document.querySelector('unc-vertical-menu').addEventListener('select', event => {
         document.getElementById("menu-result")
-            .innerText = `old selection: ${event.detail.oldSelection}, new selection: ${event.detail.newSelection}`;
+            .innerText = `selection: index=${event.detail.index}, label: ${event.detail.label}`;
     });
 
 </script>

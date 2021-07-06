@@ -16,22 +16,12 @@ class UncVerticalMenu extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
-        this._slot = this.shadowRoot.querySelector('slot');
         this._onItemClickCallback = event => this._onItemClick(event);
     }
 
     connectedCallback() {
         this.shadowRoot.querySelector('slot')
             .addEventListener('slotchange', event => this._onSlotChange(event));
-    }
-
-    disconnectedCallback() {
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {
-            this[name] = newValue;
-        }
     }
 
     _onSlotChange(event) {
@@ -45,24 +35,35 @@ class UncVerticalMenu extends HTMLElement {
         this.selected = event.target;
     }
 
+    get _items() {
+        return Array.from(this.querySelectorAll('unc-menu-item'));
+    }
+
     set selected(selected) {
         const old = this.selected;
         if (old !== selected) {
-            this.querySelectorAll('unc-menu-item')
-                .forEach(item => item.removeAttribute('selected'));
+            this._items.forEach(item => item.removeAttribute('selected'));
             selected.setAttribute('selected', '');
+            const selectedIndex = this._items.indexOf(selected);
             this.dispatchEvent(new CustomEvent('select', {
                 detail: {
-                    oldSelection: old ? old.label : undefined,
-                    newSelection: selected.label
+                    index: this.selectedIndex,
+                    label: selected.label
                 }
             }));
         }
     }
 
     get selected() {
-        return Array.from(this.querySelectorAll('unc-menu-item'))
-            .find(item => item.hasAttribute('selected'));
+        return this._items.find(item => item.hasAttribute('selected'));
+    }
+
+    get selectedIndex() {
+        return this._items.indexOf(this.selected);
+    }
+
+    select(index) {
+        this.selected = this._items[index];
     }
 }
 

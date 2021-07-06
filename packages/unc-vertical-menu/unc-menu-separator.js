@@ -19,12 +19,6 @@ class UncMenuSeparator extends HTMLElement {
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
     }
-
-    connectedCallback() {
-    }
-
-    disconnectedCallback() {
-    }
 }
 
 if (customElements && !customElements.get('unc-menu-separator')) {
