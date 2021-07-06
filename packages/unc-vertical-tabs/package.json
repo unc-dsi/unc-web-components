@@ -1,10 +1,11 @@
 {
   "name": "@unc-dsi/unc-vertical-tabs",
   "description": "unc-vertical-tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "unc-vertical-tabs.js",
   "files": [
-    "unc-vertical-tabs.js"
+      "unc-vertical-tabs.js",
+      "unc-vertical-tab.js"
   ],
   "keywords": [
     "UNC",

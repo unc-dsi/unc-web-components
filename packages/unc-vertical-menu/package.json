@@ -1,10 +1,12 @@
 {
   "name": "@unc-dsi/unc-vertical-menu",
   "description": "unc-vertical-menu",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "unc-vertical-menu.js",
   "files": [
-    "unc-vertical-menu.js"
+      "unc-vertical-menu.js",
+      "unc-menu-item.js",
+      "unc-menu-separator.js"
   ],
   "keywords": [
     "UNC",
