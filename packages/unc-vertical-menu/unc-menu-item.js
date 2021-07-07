@@ -28,7 +28,7 @@ template.innerHTML = `
 <span></span>
 `;
 
-class UncMenuItem extends HTMLElement {
+export class UncMenuItem extends HTMLElement {
     static get observedAttributes() {
         return ['icon', 'label', 'selected'];
     }

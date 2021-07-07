@@ -60,7 +60,7 @@ label:empty {
 </div>
 `;
 
-class UncInitialBar extends HTMLElement {
+export class UncInitialBar extends HTMLElement {
     static get observedAttributes() {
         return ['label', 'selection'];
     }

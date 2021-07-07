@@ -13,7 +13,7 @@ hr {
 <hr>
 `;
 
-class UncMenuSeparator extends HTMLElement {
+export class UncMenuSeparator extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'})

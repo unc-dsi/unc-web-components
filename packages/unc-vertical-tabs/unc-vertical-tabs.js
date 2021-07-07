@@ -17,7 +17,7 @@ div {
 <div></div>
 `;
 
-class UncVerticalTabs extends HTMLElement {
+export class UncVerticalTabs extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'})
@@ -40,18 +40,21 @@ class UncVerticalTabs extends HTMLElement {
     }
 
     _onChildrenChange() {
-        const menu = this.shadowRoot.querySelector('unc-vertical-menu');
-        const selectedIndex = menu.selectedIndex !== -1 ? menu.selectedIndex : 0;
-        menu.innerHTML = '';
-        this.querySelectorAll('unc-vertical-tab').forEach(tab => {
-            const menuItem = document.createElement('unc-menu-item');
-            ['icon', 'label']
-                .filter(attribute => tab.hasAttribute(attribute))
-                .forEach(attribute => menuItem.setAttribute(attribute, tab.getAttribute(attribute)));
-            menu.appendChild(menuItem);
-        });
-        menu.select(selectedIndex);
-        this._onMenuSelectChange(selectedIndex);
+        customElements.whenDefined('unc-vertical-menu')
+            .then(() => {
+                const menu = this.shadowRoot.querySelector('unc-vertical-menu');
+                const selectedIndex = menu.selectedIndex !== -1 ? menu.selectedIndex : 0;
+                menu.innerHTML = '';
+                this.querySelectorAll('unc-vertical-tab').forEach(tab => {
+                    const menuItem = document.createElement('unc-menu-item');
+                    ['icon', 'label']
+                        .filter(attribute => tab.hasAttribute(attribute))
+                        .forEach(attribute => menuItem.setAttribute(attribute, tab.getAttribute(attribute)));
+                    menu.appendChild(menuItem);
+                });
+                menu.select(selectedIndex);
+                this._onMenuSelectChange(selectedIndex);
+            });
     }
 
     _onMenuSelectChange(index) {

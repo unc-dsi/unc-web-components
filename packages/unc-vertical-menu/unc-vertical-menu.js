@@ -11,7 +11,7 @@ template.innerHTML = `
 <slot></slot>
 `;
 
-class UncVerticalMenu extends HTMLElement {
+export class UncVerticalMenu extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'})

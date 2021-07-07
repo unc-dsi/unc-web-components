@@ -3,7 +3,7 @@ template.innerHTML = `
 <slot></slot>
 `;
 
-class UncVerticalTab extends HTMLElement {
+export class UncVerticalTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'})
