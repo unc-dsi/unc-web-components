@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-vertical-tabs",
   "description": "unc-vertical-tabs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "unc-vertical-tabs.js",
   "files": [
     "unc-vertical-tabs.js",

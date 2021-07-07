@@ -8,13 +8,15 @@ template.innerHTML = `
     display: flex;
     flex-direction: row;
 }
-div {
+slot[name=content] {
+    display: block;
     width: 100%;
 }
 </style>
 <unc-vertical-menu>
 </unc-vertical-menu>
-<div></div>
+<slot></slot>
+<slot name="content"></slot>
 `;
 
 export class UncVerticalTabs extends HTMLElement {
@@ -25,45 +27,30 @@ export class UncVerticalTabs extends HTMLElement {
     }
 
     connectedCallback() {
-        this._observer = new MutationObserver(_ => this._onChildrenChange());
-        this._observer.observe(this, { childList: true, attributes: true, subtree: true });
-        this.querySelectorAll('unc-vertical-tab').forEach(tab => {
-            this._observer.observe(tab, { childList: true, attributes: true, subtree: true, characterData: true});
-        });
-        this._onChildrenChange();
-        this.shadowRoot.querySelector('unc-vertical-menu')
-            .addEventListener('select', event => this._onMenuSelectChange(event.detail.index));
+        this._menu = this.shadowRoot.querySelector('unc-vertical-menu');
+        this._menu.addEventListener('select', event => this._onSelectedTabChange(event));
+        const content = this.shadowRoot.querySelector('slot');
+        content.addEventListener('slotchange', event => this._onContentChange(event));
     }
 
-    disconnectedCallback() {
-        this._observer.disconnect();
+    get _tabs() {
+        return this.querySelectorAll('unc-vertical-tab');
     }
 
-    _onChildrenChange() {
-        customElements.whenDefined('unc-vertical-menu')
-            .then(() => {
-                const menu = this.shadowRoot.querySelector('unc-vertical-menu');
-                const selectedIndex = menu.selectedIndex !== -1 ? menu.selectedIndex : 0;
-                menu.innerHTML = '';
-                this.querySelectorAll('unc-vertical-tab').forEach(tab => {
-                    const menuItem = document.createElement('unc-menu-item');
-                    ['icon', 'label']
-                        .filter(attribute => tab.hasAttribute(attribute))
-                        .forEach(attribute => menuItem.setAttribute(attribute, tab.getAttribute(attribute)));
-                    menu.appendChild(menuItem);
-                });
-                menu.select(selectedIndex);
-                this._onMenuSelectChange(selectedIndex);
-            });
+    _onSelectedTabChange(event) {
+        if (this._selectedTab) {
+            this._selectedTab.hide();
+        }
+        this._selectedTab = this._tabs.item(event.detail.index);
+        this._selectedTab.setAttribute('slot', 'content');
+        this._selectedTab.show();
     }
 
-    _onMenuSelectChange(index) {
-        const tab = this.querySelectorAll('unc-vertical-tab').item(index);
-        const wrapper = this.shadowRoot.querySelector('div');
-        wrapper.innerHTML = '';
-        tab.childNodes.forEach(node => {
-            wrapper.appendChild(node.cloneNode(true))
-        });
+    _onContentChange(event) {
+        this._tabs.forEach(tab => this._menu.appendChild(tab.getMenuItem()));
+        if (!this._selectedTab) {
+            this._menu.select(0);
+        }
     }
 }
 
