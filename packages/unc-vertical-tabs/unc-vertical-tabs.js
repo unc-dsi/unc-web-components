@@ -45,8 +45,9 @@ class UncVerticalTabs extends HTMLElement {
         menu.innerHTML = '';
         this.querySelectorAll('unc-vertical-tab').forEach(tab => {
             const menuItem = document.createElement('unc-menu-item');
-            menuItem.setAttribute('icon', tab.getAttribute('icon'));
-            menuItem.setAttribute('label', tab.getAttribute('label'));
+            ['icon', 'label']
+                .filter(attribute => tab.hasAttribute(attribute))
+                .forEach(attribute => menuItem.setAttribute(attribute, tab.getAttribute(attribute)));
             menu.appendChild(menuItem);
         });
         menu.select(selectedIndex);
