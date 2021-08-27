@@ -1,0 +1,29 @@
+{
+  "name": "@unc-dsi/unc-wizard-steps",
+  "description": "unc-wizard-steps",
+  "version": "0.0.1",
+  "main": "unc-wizard-steps.js",
+  "files": [
+    "unc-wizard-steps.js",
+    "unc-wizard-step.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-wizard-steps",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-wizard-steps"
+  }
+}
