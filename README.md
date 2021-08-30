@@ -11,6 +11,7 @@ All components are licensed under the Apache License 2.0.
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-initial-bar">&lt;unc-initial-bar&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-initial-bar/)](https://www.npmjs.com/package/@unc-dsi/unc-initial-bar) | Work in progress | A bar to select an initial. |
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-menu">&lt;unc-vertical-menu&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-menu/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-menu) | Work in progress | A vertical menu. |
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-tabs">&lt;unc-vertical-tabs&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-tabs/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-tabs) | Work in progress | A tabs system with an dynamic content area. |
+| <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-horizontal-stepper">&lt;unc-horizontal-stepper&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-horizontal-stepper/)](https://www.npmjs.com/package/@unc-dsi/unc-horizontal-stepper) | Work in progress | A stepper. |
 
 ## Styling
 

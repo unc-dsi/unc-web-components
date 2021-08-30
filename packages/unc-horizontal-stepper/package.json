@@ -2,9 +2,9 @@
   "name": "@unc-dsi/unc-wizard-steps",
   "description": "unc-wizard-steps",
   "version": "0.0.1",
-  "main": "unc-wizard-steps.js",
+  "main": "",
   "files": [
-    "unc-wizard-steps.js",
+    "",
     "unc-wizard-step.js"
   ],
   "keywords": [

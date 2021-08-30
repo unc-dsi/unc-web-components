@@ -13,7 +13,7 @@
     <script type="module" src="packages/unc-initial-bar/unc-initial-bar.js"></script>
     <script type="module" src="packages/unc-vertical-menu/unc-vertical-menu.js"></script>
     <script type="module" src="packages/unc-vertical-tabs/unc-vertical-tabs.js"></script>
-    <script type="module" src="packages/unc-wizard-steps/unc-wizard-steps.js"></script>
+    <script type="module" src="packages/unc-horizontal-stepper/unc-horizontal-stepper.js"></script>
 
     <style>
         unc-initial-bar {
@@ -60,14 +60,16 @@
     </unc-vertical-tab>
 </unc-vertical-tabs>
 
-<h3>&lt;unc-wizard-steps&gt;</h3>
+<h3>&lt;unc-horizontal-stepper&gt;</h3>
 <p>
     TODO
 </p>
-<unc-wizard-steps>
-    <unc-wizard-step>Campagne</unc-wizard-step>
-    <unc-wizard-step>Disponibilités</unc-wizard-step>
-</unc-wizard-steps>
+<unc-horizontal-stepper current-step="1">
+    <unc-horizontal-step>Step 1</unc-horizontal-step>
+    <unc-horizontal-step>Step 2</unc-horizontal-step>
+    <unc-horizontal-step>Step 3</unc-horizontal-step>
+</unc-horizontal-stepper>
+<span id="stepper-result"></span>
 
 <script type="module">
     /*
@@ -86,6 +88,11 @@
             .innerText = `selection: index=${event.detail.index}, label: ${event.detail.label}`;
     });
 
+    // unc-horizontal-stepper
+    document.querySelector('unc-horizontal-stepper').addEventListener('select', event => {
+        document.getElementById("stepper-result")
+            .innerText = `new selected index: ${event.detail.currentStep}`;
+    })
 </script>
 </body>
 </html>
