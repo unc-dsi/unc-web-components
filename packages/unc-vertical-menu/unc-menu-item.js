@@ -2,26 +2,28 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 :host {
-    --unc-menu-item-icon-size: var(--lumo-icon-size-m, 24px);
-    --unc-menu-item-padding: var(--lumo-space-s, 0.5rem);
-    --unc-menu-item-selected-bgcolor: var(--lumo-contrast-20pct, hsla(214, 53%, 23%, 0.16));
-    --unc-menu-item-selected-fgcolor: var(--lumo-primary-color, hsl(214, 90%, 52%));
-    --unc-menu-item-hover-bgcolor: var(--lumo-contrast-10pct, hsla(214, 53%, 23%, 0.16));
+    --icon-size: var(--unc-menu-item-icon-size, var(--lumo-icon-size-m, 24px));
+    --vertical-padding: var(--unc-menu-item-vertical-padding, var(--lumo-space-s, 0.5rem));
+    --selected-bgcolor: var(--unc-menu-item-selected-bgcolor, var(--lumo-contrast-20pct, hsla(214, 53%, 23%, 0.16)));
+    --selected-fgcolor: var(--unc-menu-item-selected-fgcolor, var(--lumo-primary-color, hsl(214, 90%, 52%)));
+    --hover-bgcolor: var(--unc-menu-item-hover-bgcolor, var(--lumo-contrast-10pct, hsla(214, 53%, 23%, 0.16)));
+}
+:host {
     display: flex;
-    height: var(--unc-menu-item-icon-size);
-    padding: var(--unc-menu-item-padding) var(--unc-menu-item-icon-size);
+    height: var(--icon-size);
+    padding: var(--vertical-padding) var(--icon-size);
     cursor: pointer;
     align-items: center;
 }
 :host(:hover) {
-    background-color: var(--unc-menu-item-hover-bgcolor);
+    background-color: var(--hover-bgcolor);
 }
 :host([selected]) {
-    background-color: var(--unc-menu-item-selected-bgcolor);
+    background-color: var(--selected-bgcolor);
     font-weight: bolder;
 }
-:host([selected])  iron-icon {
-    color: var(--unc-menu-item-selected-fgcolor);
+:host([selected]) iron-icon {
+    color: var(--selected-fgcolor);
 }
 </style>
 <iron-icon></iron-icon>

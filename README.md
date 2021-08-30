@@ -43,5 +43,6 @@ Before publishing a compent, ensure that $HOME/.npmrc use the npm public reposit
 ```shell
 npm login
 cd packages/<component>
+vim package.json # to increment version
 npm publish --access public
 ```
