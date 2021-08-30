@@ -1,15 +1,15 @@
 {
-  "name": "@unc-dsi/unc-wizard-steps",
-  "description": "unc-wizard-steps",
+  "name": "@unc-dsi/unc-horizontal-stepper",
+  "description": "unc-horizontal-stepper",
   "version": "0.0.1",
   "main": "",
   "files": [
-    "",
-    "unc-wizard-step.js"
+    "unc-horizontal-stepper.js",
+    "unc-horizontal-step.js"
   ],
   "keywords": [
     "UNC",
-    "unc-wizard-steps",
+    "unc-horizontal-stepper",
     "web-components",
     "web-component"
   ],
