@@ -12,6 +12,10 @@ All components are licensed under the Apache License 2.0.
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-menu">&lt;unc-vertical-menu&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-menu/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-menu) | Work in progress | A vertical menu. |
 | <a href="https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-vertical-tabs">&lt;unc-vertical-tabs&gt;</a> | [![npm version](https://badgen.net/npm/v/@unc-dsi/unc-vertical-tabs/)](https://www.npmjs.com/package/@unc-dsi/unc-vertical-tabs) | Work in progress | A tabs system with an dynamic content area. |
 
+## Styling
+
+All components try to be compatible with [Vaadin Lumo]((https://vaadin.com/docs/latest/ds/foundation)) styles.
+
 ## Browser support
 
 UNC Web Components use Custom Elements and Shadow DOM that are natively supported by modern browsers.
@@ -31,4 +35,13 @@ npm install
 Then run the demo
 ```shell
 npm run demo
+```
+
+## Publishing
+
+Before publishing a compent, ensure that $HOME/.npmrc use the npm public repository. Then:
+```shell
+npm login
+cd packages/<component>
+npm publish --access public
 ```

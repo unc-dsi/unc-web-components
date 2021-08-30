@@ -9,13 +9,13 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 :host {
-    --unc-initial-bar-padding: calc(var(--lumo-space-xs, 0.25rem) / 2);
-    --unc-initial-bar-selected-color: var(--lumo-base-color, #fff);
-    --unc-initial-bar-selected-background-color: var(--lumo-primary-color, hsl(214, 90%, 52%));
-    --unc-initial-bar-border-color: var(--lumo-shade-20pct, hsla(214, 53%, 23%, 0.16));
-    --unc-initial-bar-hover-color: var(--unc-initial-bar-border-color);
-    --unc-initial-bar-label-color: var(--lumo-secondary-text-color, hsla(214, 42%, 18%, 0.72));
-    --unc-initial-bar-label-size: var(--lumoe-font-size-s, .875rem);
+    --padding: var(--unc-initial-bar-padding, calc(var(--lumo-space-xs, 0.25rem) / 2));
+    --selected-color: var(--unc-initial-bar-selected-color, var(--lumo-base-color, #fff));
+    --selected-background-color: var(--unc-initial-bar-selected-background-color, var(--lumo-primary-color, hsl(214, 90%, 52%)));
+    --border-color: var(--unc-initial-bar-border-color, var(--lumo-shade-20pct, hsla(214, 53%, 23%, 0.16)));
+    --hover-color: var(--unc-initial-bar-hover-color, var(--border-color));
+    --label-color: var(--unc-initial-bar-label-color, var(--lumo-secondary-text-color, hsla(214, 42%, 18%, 0.72)));
+    --label-size: var(--unc-initial-bar-label-size, var(--lumoe-font-size-s, .875rem));
     display: inline-block;
 }
 ul {
@@ -25,18 +25,18 @@ ul {
 }
 li {
     display: inline-block;
-    padding: var(--unc-initial-bar-padding) var(--unc-initial-bar-padding);
-    border: 1px solid var(--unc-initial-bar-border-color);
+    padding: var(--padding) var(--padding);
+    border: 1px solid var(--border-color);
     width: 1em;
     text-align: center;
 }
 li:hover {
     cursor: pointer;
-    background-color: var(--unc-initial-bar-hover-color);
+    background-color: var(--hover-color);
 }
 li[selected] {
-    color: var(--unc-initial-bar-selected-color);
-    background-color: var(--unc-initial-bar-selected-background-color);
+    color: var(--selected-color);
+    background-color: var(--selected-background-color);
 }
 div {
     display: flex;
@@ -44,9 +44,9 @@ div {
 }
 label {
     align-self: flex-start;
-    color: var(--unc-initial-bar-label-color);
+    color: var(--label-color);
     font-weight: 500;
-    font-size: var(--unc-initial-bar-label-size);
+    font-size: var(--label-size);
     padding-bottom: 0.5em;
     line-height: 1;
 }

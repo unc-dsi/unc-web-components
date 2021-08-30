@@ -18,7 +18,7 @@ template.innerHTML = `
 <slot></slot>
 `;
 
-export class UncWizardSteps extends HTMLElement {
+export class UncHorizontalStepper extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'})
@@ -31,7 +31,7 @@ export class UncWizardSteps extends HTMLElement {
     }
 
     _onContentChange(event) {
-        const steps = this.querySelectorAll('unc-wizard-step');
+        const steps = this.querySelectorAll('unc-horizontal-step');
         steps.forEach(step => {
             step.removeAttribute('first');
         });
@@ -42,6 +42,6 @@ export class UncWizardSteps extends HTMLElement {
     }
 }
 
-if (customElements && !customElements.get('unc-wizard-steps')) {
-    customElements.define('unc-wizard-steps', UncWizardSteps);
+if (customElements && !customElements.get('unc-horizontal-stepper')) {
+    customElements.define('unc-horizontal-stepper', UncHorizontalStepper);
 }
