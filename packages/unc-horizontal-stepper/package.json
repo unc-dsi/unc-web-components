@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-horizontal-stepper",
   "description": "unc-horizontal-stepper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "",
   "files": [
     "unc-horizontal-stepper.js",
@@ -24,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-wizard-steps"
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-horizontal-stepper"
   }
 }
