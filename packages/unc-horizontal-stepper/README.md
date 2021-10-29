@@ -32,7 +32,7 @@
 | --unc-horizontal-stepper-background-color | --lumo-primary-color | hsl(214, 90%, 50%) | Background color of the stepper |
 | --unc-horizontal-step-dot-color-active | --lumo-base-color | #fff | Dot's color of an active dot |
 | --unc-horizontal-step-color-inactive |--lumo-disabled-text-color | hsla(214, 50%, 22%, 0.26) | Dot's color of an inactive dot |
-| ----unc-horizontal-step-dot-size | N/A | 13px | Size of a dot |
+| --unc-horizontal-step-dot-size | N/A | 13px | Size of a dot |
 | --unc-horizontal-step-line-height |N/A | 2px | Height of line between dots |
 
 ## License
