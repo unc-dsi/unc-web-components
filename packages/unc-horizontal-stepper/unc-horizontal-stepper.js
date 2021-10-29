@@ -81,7 +81,7 @@ export class UncHorizontalStepper extends HTMLElement {
 
     _selectStep(selectedIndex) {
         const selectedStep = this._getSteps()[selectedIndex];
-        if (selectedStep.hasAttribute("disabled")) {
+        if (selectedStep && selectedStep.hasAttribute("disabled")) {
             return;
         }
         this.setAttribute("current-step", selectedIndex);
