@@ -26,37 +26,37 @@ export class UncWizardButtons extends HTMLElement {
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
     }
-
-    connectedCallback() {
-        this.shadowRoot.querySelector('#previous')
-            .addEventListener('slotchange', event => this._onPreviousChange(event));
-        this.shadowRoot.querySelector('#next')
-            .addEventListener('slotchange', event => this._onNextChange(event));
-    }
-
-    _onPreviousChange(e) {
-        if (e.target.id === 'previous') {
-            e.target.addEventListener("click", event => this._onPreviousClick(event));
-        }
-    }
-
-    _onNextChange(e) {
-        if (e.target.id === 'next') {
-            e.target.addEventListener("click", event => this._onNextClick(event));
-        }
-    }
-
-    _onPreviousClick(event) {
-        if (this.wizard) {
-            this.wizard.previous();
-        }
-    }
-
-    _onNextClick(event) {
-        if (this.wizard) {
-            this.wizard.next();
-        }
-    }
+    //
+    // connectedCallback() {
+    //     this.shadowRoot.querySelector('#previous')
+    //         .addEventListener('slotchange', event => this._onPreviousChange(event));
+    //     this.shadowRoot.querySelector('#next')
+    //         .addEventListener('slotchange', event => this._onNextChange(event));
+    // }
+    //
+    // _onPreviousChange(e) {
+    //     if (e.target.id === 'previous') {
+    //         e.target.addEventListener("click", event => this._onPreviousClick(event));
+    //     }
+    // }
+    //
+    // _onNextChange(e) {
+    //     if (e.target.id === 'next') {
+    //         e.target.addEventListener("click", event => this._onNextClick(event));
+    //     }
+    // }
+    //
+    // _onPreviousClick(event) {
+    //     if (this.wizard) {
+    //         this.wizard.previous();
+    //     }
+    // }
+    //
+    // _onNextClick(event) {
+    //     if (this.wizard) {
+    //         this.wizard.next();
+    //     }
+    // }
 }
 
 if (customElements && !customElements.get('unc-wizard-buttons')) {

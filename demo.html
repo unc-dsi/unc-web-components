@@ -121,9 +121,16 @@
     });
 
     // unc-wizard
-    document.querySelector('unc-wizard').addEventListener('page-change', event => {
+    let wizard = document.querySelector('unc-wizard');
+    wizard.addEventListener('page-change', event => {
         document.getElementById("wizard-result")
             .innerText = `new page selected: ${event.detail.currentIndex}`;
+    });
+    document.querySelectorAll("vaadin-button[slot=next]").forEach(nextBtn => {
+        nextBtn.addEventListener("click", event => wizard.next());
+    });
+    document.querySelectorAll("vaadin-button[slot=previous]").forEach(nextBtn => {
+        nextBtn.addEventListener("click", event => wizard.previous());
     });
 </script>
 </body>
