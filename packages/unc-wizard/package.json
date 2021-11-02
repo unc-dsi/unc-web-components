@@ -5,7 +5,8 @@
   "main": "",
   "files": [
     "unc-wizard.js",
-    "unc-wizard-page.js"
+    "unc-wizard-page.js",
+    "unc-wizard-buttons.js"
   ],
   "keywords": [
     "UNC",
