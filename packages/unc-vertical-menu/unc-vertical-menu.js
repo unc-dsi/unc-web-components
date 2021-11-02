@@ -44,7 +44,6 @@ export class UncVerticalMenu extends HTMLElement {
         if (old !== selected) {
             this._items.forEach(item => item.removeAttribute('selected'));
             selected.setAttribute('selected', '');
-            const selectedIndex = this._items.indexOf(selected);
             this.dispatchEvent(new CustomEvent('select', {
                 detail: {
                     index: this.selectedIndex,

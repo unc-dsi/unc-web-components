@@ -1,0 +1,32 @@
+{
+  "name": "@unc-dsi/unc-wizard",
+  "description": "unc-wizard",
+  "version": "0.0.1",
+  "main": "",
+  "files": [
+    "unc-wizard.js",
+    "unc-wizard-page.js"
+  ],
+  "keywords": [
+    "UNC",
+    "unc-wizard",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@vaadin/vaadin-button": "^21.0.3",
+    "@vaadin/vaadin-ordered-layout": "^21.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-wizard"
+  }
+}

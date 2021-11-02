@@ -48,7 +48,9 @@ export class UncHorizontalStepper extends HTMLElement {
     }
 
     set currentStep(index) {
-        this._selectStep(index);
+        if (index != this.currentStep) {
+            this._selectStep(index);
+        }
     }
 
     get currentStep() {
@@ -65,6 +67,7 @@ export class UncHorizontalStepper extends HTMLElement {
         const first = steps[0];
         if (first) {
             first.setAttribute('first', '');
+            this.setAttribute('current-step', '0');
         }
         steps.forEach(step => {
             step.addEventListener("click", event => {

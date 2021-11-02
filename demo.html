@@ -7,17 +7,22 @@
     <!-- Thrid party imports -->
     <script type="module" src="node_modules/@polymer/iron-icons/iron-icons.js"></script>
     <script type="module" src="node_modules/@polymer/iron-icons/social-icons.js"></script>
-    <script type="module" src="node_modules/@vaadin/vaadin-lumo-styles/all-imports.js"></script>
+    <script type="module" src="node_modules/@vaadin/vaadin-button/vaadin-button.js"></script>
 
     <!-- UNC Web Components use standard JavaScript modules. -->
     <script type="module" src="packages/unc-initial-bar/unc-initial-bar.js"></script>
     <script type="module" src="packages/unc-vertical-menu/unc-vertical-menu.js"></script>
     <script type="module" src="packages/unc-vertical-tabs/unc-vertical-tabs.js"></script>
     <script type="module" src="packages/unc-horizontal-stepper/unc-horizontal-stepper.js"></script>
+    <script type="module" src="packages/unc-wizard/unc-wizard.js"></script>
 
     <style>
         unc-initial-bar {
             margin-bottom: 1em;
+        }
+
+        vaadin-button {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -62,7 +67,7 @@
 
 <h3>&lt;unc-horizontal-stepper&gt;</h3>
 <p>
-    TODO
+    A way to display some steps. Useful for wizards.
 </p>
 <unc-horizontal-stepper current-step="1">
     <unc-horizontal-step>Step 1</unc-horizontal-step>
@@ -70,6 +75,27 @@
     <unc-horizontal-step>Step 3</unc-horizontal-step>
 </unc-horizontal-stepper>
 <span id="stepper-result"></span>
+
+<h3>unc-wizard</h3>
+<p>
+    A wizard with steps on top.
+</p>
+<unc-wizard>
+    <unc-wizard-page label="User Info">
+        <div>
+            <h3>Some user info form</h3>
+        </div>
+        <vaadin-button slot="next" theme="primary">Next</vaadin-button>
+    </unc-wizard-page>
+    <unc-wizard-page label="Address">
+        <div>
+            <h3>Address form</h3>
+        </div>
+        <vaadin-button slot="previous" theme="secondary">Previous</vaadin-button>
+        <vaadin-button slot="next" theme="primary">Finish</vaadin-button>
+    </unc-wizard-page>
+</unc-wizard>
+<span id="wizard-result"></span>
 
 <script type="module">
     /*
@@ -92,7 +118,13 @@
     document.querySelector('unc-horizontal-stepper').addEventListener('select', event => {
         document.getElementById("stepper-result")
             .innerText = `new selected index: ${event.detail.currentStep}`;
-    })
+    });
+
+    // unc-wizard
+    document.querySelector('unc-wizard').addEventListener('page-change', event => {
+        document.getElementById("wizard-result")
+            .innerText = `new page selected: ${event.detail.currentIndex}`;
+    });
 </script>
 </body>
 </html>

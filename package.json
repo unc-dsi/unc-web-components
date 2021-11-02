@@ -5,11 +5,16 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
+    "clean": "for p in packages/*; do echo \"Cleanning ${p}\" && rm -rf ${p}/node_modules; done && rm -rf node_modules",
     "demo": "web-dev-server --node-resolve --open demo.html"
   },
   "dependencies": {
     "@polymer/iron-icons": "^3.0.1",
-    "@vaadin/vaadin-lumo-styles": "^20.0.0"
+    "@unc-dsi/unc-horizontal-stepper": "file:./packages/unc-horizontal-stepper",
+    "@unc-dsi/unc-initial-bar": "file:./packages/unc-initial-bar",
+    "@unc-dsi/unc-vertical-menu": "file:./packages/unc-vertical-menu",
+    "@unc-dsi/unc-vertical-tabs": "file:./packages/unc-vertical-tabs",
+    "@unc-dsi/unc-wizard": "file:./packages/unc-wizard"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.17"
