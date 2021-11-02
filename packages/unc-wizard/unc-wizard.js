@@ -11,7 +11,7 @@ template.innerHTML = `
     --wizard-margin-top: var(--unc-wizard-margin-top, var(--lumo-space-l, 1.5rem));
     --wizard-border-color: var(--unc-wizard-border-color, var(--lumo-shade-10pct, hsla(214, 57%, 24%, 0.1)));
     --wizard-border-radius: var(--unc-wizard-border-radius, var(--lumo-border-radius-l, 0.5rem));
-    --wizard-shadow: var(--unc-wizard-shadow, var(--lumo-box-shadow-s, "0 2px 4px -1px hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px hsla(214, 50%, 22%, 0.26"))
+    --wizard-shadow: var(--unc-wizard-shadow, var(--lumo-box-shadow-s, "0 2px 4px -1px hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px hsla(214, 50%, 22%, 0.26"));
 
     display: flex;
     justify-items: center;
