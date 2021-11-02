@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-wizard",
   "description": "unc-wizard",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "",
   "files": [
     "unc-wizard.js",
@@ -17,6 +17,7 @@
   "author": "University of New-Caledonia",
   "license": "Apache-2.0",
   "dependencies": {
+    "@unc-dsi/unc-horizontal-stepper": "0.0.3",
     "@vaadin/vaadin-button": "^21.0.3",
     "@vaadin/vaadin-ordered-layout": "^21.0.3"
   },
