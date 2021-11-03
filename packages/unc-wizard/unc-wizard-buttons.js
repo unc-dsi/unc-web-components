@@ -10,13 +10,16 @@ template.innerHTML = `
 vaadin-horizontal-layout {
     width: 100%;
 }
-.align-right::slotted(*) {
+.align-right {
     margin-left: auto;
 }
 </style>
 <vaadin-horizontal-layout theme="spacing">
-    <slot id="previous" name="previous"></slot>
-    <slot id="next" name="next" class="align-right"></slot>
+    <slot name="previous"></slot>
+    <div class="align-right">
+        <slot name="skip"></slot>
+        <slot name="next"></slot>
+    </div>
 </vaadin-horizontal-layout>
 `
 
@@ -26,37 +29,6 @@ export class UncWizardButtons extends HTMLElement {
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
     }
-    //
-    // connectedCallback() {
-    //     this.shadowRoot.querySelector('#previous')
-    //         .addEventListener('slotchange', event => this._onPreviousChange(event));
-    //     this.shadowRoot.querySelector('#next')
-    //         .addEventListener('slotchange', event => this._onNextChange(event));
-    // }
-    //
-    // _onPreviousChange(e) {
-    //     if (e.target.id === 'previous') {
-    //         e.target.addEventListener("click", event => this._onPreviousClick(event));
-    //     }
-    // }
-    //
-    // _onNextChange(e) {
-    //     if (e.target.id === 'next') {
-    //         e.target.addEventListener("click", event => this._onNextClick(event));
-    //     }
-    // }
-    //
-    // _onPreviousClick(event) {
-    //     if (this.wizard) {
-    //         this.wizard.previous();
-    //     }
-    // }
-    //
-    // _onNextClick(event) {
-    //     if (this.wizard) {
-    //         this.wizard.next();
-    //     }
-    // }
 }
 
 if (customElements && !customElements.get('unc-wizard-buttons')) {
