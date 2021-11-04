@@ -67,9 +67,12 @@ export class UncWizard extends HTMLElement {
     _onContentChange() {
         const stepper = this._getStepper();
         const steps = this._getPages();
-        steps.forEach(step => {
+        steps.forEach((step, idx) => {
             step.wizard = this;
             const elt = document.createElement('unc-horizontal-step');
+            if (idx !== 0) {
+                elt.setAttribute("disabled", "");
+            }
             elt.innerText = step.getAttribute('label');
             stepper.appendChild(elt);
         });
@@ -79,7 +82,9 @@ export class UncWizard extends HTMLElement {
         const previousPageIndex = this._getCurrentPageIndex();
         const newPage = this._getPages()[newPageIndex];
         if (newPage) {
-            this._getStepper().currentStep = newPageIndex;
+            const stepper = this._getStepper();
+            stepper.querySelectorAll("unc-horizontal-step").item(newPageIndex).removeAttribute("disabled");
+            stepper.currentStep = newPageIndex;
             this._getPages().forEach(page => {
                 page.classList.remove("active");
             });
