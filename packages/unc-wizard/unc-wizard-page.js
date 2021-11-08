@@ -13,9 +13,8 @@ unc-wizard-buttons {
 </style>
 <slot></slot>
 <unc-wizard-buttons>
-    <slot name="previous" slot="previous"></slot>
-    <slot name="next" slot="next"></slot>
-    <slot name="skip" slot="skip"></slot>
+    <slot name="right" slot="right"></slot>
+    <slot name="left" slot="left"></slot>
 </unc-wizard-buttons>
 `
 export class UncWizardPage extends HTMLElement {

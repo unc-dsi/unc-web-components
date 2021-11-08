@@ -15,10 +15,11 @@ vaadin-horizontal-layout {
 }
 </style>
 <vaadin-horizontal-layout theme="spacing">
-    <slot name="previous"></slot>
+    <div>
+        <slot name="left"></slot>
+    </div>
     <div class="align-right">
-        <slot name="skip"></slot>
-        <slot name="next"></slot>
+        <slot name="right"></slot>
     </div>
 </vaadin-horizontal-layout>
 `

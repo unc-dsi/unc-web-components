@@ -14,8 +14,8 @@
         <div>
             <h3>Address form</h3>
         </div>
-        <vaadin-button slot="previous" theme="secondary">Previous</vaadin-button>
-        <vaadin-button slot="next" theme="primary">Finish</vaadin-button>
+        <vaadin-button slot="left" theme="secondary">Previous</vaadin-button>
+        <vaadin-button slot="right" theme="primary">Finish</vaadin-button>
     </unc-wizard-page>
 </unc-wizard>
 ```

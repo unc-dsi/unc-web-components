@@ -85,15 +85,15 @@
         <div>
             <h3>Some user info form</h3>
         </div>
-        <vaadin-button slot="next" theme="primary">Next</vaadin-button>
-        <vaadin-button slot="skip" theme="tertiary">Skip</vaadin-button>
+        <vaadin-button slot="right" theme="tertiary">Skip</vaadin-button>
+        <vaadin-button slot="right" action="next" theme="primary">Next</vaadin-button>
     </unc-wizard-page>
     <unc-wizard-page label="Address">
         <div>
             <h3>Address form</h3>
         </div>
-        <vaadin-button slot="previous" theme="secondary">Previous</vaadin-button>
-        <vaadin-button slot="next" theme="primary">Finish</vaadin-button>
+        <vaadin-button slot="left" action="previous" theme="secondary">Previous</vaadin-button>
+        <vaadin-button slot="right" action="next" theme="primary">Finish</vaadin-button>
     </unc-wizard-page>
 </unc-wizard>
 <span id="wizard-result"></span>
@@ -127,10 +127,10 @@
         document.getElementById("wizard-result")
             .innerText = `new page selected: ${event.detail.currentIndex}`;
     });
-    document.querySelectorAll("vaadin-button[slot=next]").forEach(nextBtn => {
+    document.querySelectorAll("vaadin-button[action=next]").forEach(nextBtn => {
         nextBtn.addEventListener("click", event => wizard.next());
     });
-    document.querySelectorAll("vaadin-button[slot=previous]").forEach(nextBtn => {
+    document.querySelectorAll("vaadin-button[action=previous]").forEach(nextBtn => {
         nextBtn.addEventListener("click", event => wizard.previous());
     });
 </script>
