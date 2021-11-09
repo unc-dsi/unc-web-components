@@ -33,6 +33,11 @@ template.innerHTML = `
     background-color: var(--pushed-bg-color);
     box-shadow: var(--pushed-shadow);
 }
+:host([disabled]) {
+    color: var(--lumo-disabled-text-color);
+    cursor: default;
+    box-shadow: none;
+}
 </style>
 <slot></slot>
 `
@@ -65,12 +70,14 @@ export class UncPushButton extends HTMLElement {
     }
 
     _onClick() {
-        this.pushed = !this.pushed;
-        this.dispatchEvent(new CustomEvent('push', {
-            detail: {
-                pushed: this.pushed
-            }
-        }));
+        if (!this.hasAttribute('disabled')) {
+            this.pushed = !this.pushed;
+            this.dispatchEvent(new CustomEvent('push', {
+                detail: {
+                    pushed: this.pushed
+                }
+            }));
+        }
     }
 }
 

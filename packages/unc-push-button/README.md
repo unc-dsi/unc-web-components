@@ -13,6 +13,7 @@
 | Name | Description |
 |------|-------------|
 | pushed | State of the button |
+| disabled | To disabled the button |
 
 ## Events
 
