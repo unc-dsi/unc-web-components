@@ -18,7 +18,7 @@
 
 | Name | Description |
 |------|-------------|
-| click | Fire when the button is clicked :  {detail: { pushed }} |
+| push | Fire when the button is pushed :  {detail: { pushed }} |
 
 ## Styling
 

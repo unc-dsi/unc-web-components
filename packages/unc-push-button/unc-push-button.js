@@ -61,7 +61,7 @@ export class UncPushButton extends HTMLElement {
 
     _onClick() {
         this.pushed = !this.pushed;
-        this.dispatchEvent(new CustomEvent('click', {
+        this.dispatchEvent(new CustomEvent('push', {
             detail: {
                 pushed: this.pushed
             }
