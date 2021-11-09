@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-push-button",
   "description": "unc-push-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "unc-push-button.js",
   "files": [
     "unc-push-button.js"
