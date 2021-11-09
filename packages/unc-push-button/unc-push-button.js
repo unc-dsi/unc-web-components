@@ -41,10 +41,15 @@ export class UncPushButton extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
             .appendChild(template.content.cloneNode(true));
+        this._clickListener = event => this._onClick();
     }
 
     connectedCallback() {
-        this.addEventListener('click', event => this._onClick())
+        this.addEventListener('click', this._clickListener);
+    }
+
+    disconnectedCallback() {
+        this.removeEventListener('click', this._clickListener);
     }
 
     get pushed() {
