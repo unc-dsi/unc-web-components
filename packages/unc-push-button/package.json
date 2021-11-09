@@ -1,10 +1,10 @@
 {
   "name": "@unc-dsi/unc-push-button",
   "description": "unc-push-button",
-  "version": "0.0.1",
-  "main": "",
+  "version": "0.0.2",
+  "main": "unc-push-button.js",
   "files": [
-    ""
+    "unc-push-button.js"
   ],
   "keywords": [
     "UNC",
