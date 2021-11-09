@@ -1,0 +1,28 @@
+{
+  "name": "@unc-dsi/unc-push-button",
+  "description": "unc-push-button",
+  "version": "0.0.1",
+  "main": "",
+  "files": [
+    ""
+  ],
+  "keywords": [
+    "UNC",
+    "unc-push-button",
+    "web-components",
+    "web-component"
+  ],
+  "author": "University of New-Caledonia",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unc-dsi/unc-web-components/tree/main/packages/unc-push-button"
+  }
+}

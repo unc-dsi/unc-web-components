@@ -15,8 +15,13 @@
     <script type="module" src="packages/unc-vertical-tabs/unc-vertical-tabs.js"></script>
     <script type="module" src="packages/unc-horizontal-stepper/unc-horizontal-stepper.js"></script>
     <script type="module" src="packages/unc-wizard/unc-wizard.js"></script>
+    <script type="module" src="packages/unc-push-button/unc-push-button.js"></script>
 
     <style>
+        html {
+            --lumo-clickable-cursor: pointer;
+        }
+
         unc-initial-bar {
             margin-bottom: 1em;
         }
@@ -97,6 +102,13 @@
     </unc-wizard-page>
 </unc-wizard>
 <span id="wizard-result"></span>
+
+<h3>unc-push-button</h3>
+<p>
+    TODO
+</p>
+<unc-push-button>Click Me!</unc-push-button>
+<unc-push-button pushed>Already pushed</unc-push-button>
 
 <script type="module">
     /*

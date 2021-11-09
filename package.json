@@ -14,7 +14,8 @@
     "@unc-dsi/unc-initial-bar": "file:./packages/unc-initial-bar",
     "@unc-dsi/unc-vertical-menu": "file:./packages/unc-vertical-menu",
     "@unc-dsi/unc-vertical-tabs": "file:./packages/unc-vertical-tabs",
-    "@unc-dsi/unc-wizard": "file:./packages/unc-wizard"
+    "@unc-dsi/unc-wizard": "file:./packages/unc-wizard",
+    "@unc-dsi/unc-toggle-big-button": "file:./packages/unc-toggle-big-button"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.17"
