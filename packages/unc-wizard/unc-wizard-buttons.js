@@ -13,6 +13,12 @@ vaadin-horizontal-layout {
 .align-right {
     margin-left: auto;
 }
+::slotted([slot=right]) {
+    margin-left: var(--lumo-space-s);
+}
+::slotted([slot=left]) {
+    margin-right: var(--lumo-space-s);
+}
 </style>
 <vaadin-horizontal-layout theme="spacing">
     <div>
