@@ -65,7 +65,7 @@ export class UncHorizontalStepper extends HTMLElement {
             step.removeAttribute('first');
         });
         const first = steps[0];
-        if (first) {
+        if (first && !this.hasAttribute('current-step')) {
             first.setAttribute('first', '');
             this.setAttribute('current-step', '0');
         }
