@@ -1,7 +1,7 @@
 {
   "name": "@unc-dsi/unc-horizontal-stepper",
   "description": "unc-horizontal-stepper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "",
   "files": [
     "unc-horizontal-stepper.js",
