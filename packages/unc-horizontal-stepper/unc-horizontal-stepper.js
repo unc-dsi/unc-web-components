@@ -54,9 +54,7 @@ export class UncHorizontalStepper extends HTMLElement {
     }
 
     get currentStep() {
-        return this._getSteps()
-            .map(step => step.hasAttribute("active"))
-            .lastIndexOf(true);
+        return this.getAttribute('current-step');
     }
 
     _onContentChange(event) {
